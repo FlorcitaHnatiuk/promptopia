@@ -1,21 +1,26 @@
 import '@styles/globals.css';
+import Nav from '@components/Nav';
+import Provider from '@components/Provider';
 
 export const metadate = {
-    title: "Promptopia",
-    description: "Discover and share AI Prompts"
+  title: "Promptopia",
+  description: "Discover and share AI Prompts"
 }
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
+      <Provider>
         <div className="main">
-            <div className="gradient"/>
+          <div className="gradient" />
         </div>
 
         <main className="app">
-            {children}
+          <Nav />
+          {children}
         </main>
+        </Provider>
       </body>
     </html>
   )
